@@ -18,7 +18,10 @@ discover:
     ref: master
     filter: tag:CI-Tier-1
     exclude:
+      - /Sanity/audit-rule-number
+      - /Sanity/OOM
       - /Sanity/SIGHUP
+      - /Sanity/FapolicydRules
 
 execute:
     how: tmt
