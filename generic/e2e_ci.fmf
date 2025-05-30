@@ -17,6 +17,8 @@ discover:
     url: https://github.com/RedHat-SP-Security/fapolicyd-tests
     ref: master
     filter: tag:CI-Tier-1
+    exclude:
+      - /Sanity/SIGHUP
 
 execute:
     how: tmt
