@@ -6,7 +6,7 @@ summary: test plan for fapolicyd gating testing
 prepare:
   - how: shell
     script:
-     - wget -P /etc/yum.repos.d/ https://brew-task-repos.engineering.redhat.com/repos/scratch/rsroka/fapolicyd/1.3.3/101.el9.test94/fapolicyd-1.3.3-101.el9.test94-scratch.repo
+     - wget -P /etc/yum.repos.d/ https://brew-task-repos.engineering.redhat.com/repos/scratch/rsroka/fapolicyd/1.3.3/102.el9__test51/fapolicyd-1.3.3-102.el9__test51-scratch.repo
      - systemctl disable --now dnf-makecache.service || true
      - systemctl disable --now dnf-makecache.timer || true
      - dnf makecache
@@ -17,11 +17,11 @@ discover:
     url: https://github.com/RedHat-SP-Security/fapolicyd-tests
     ref: master
     filter: tag:CI-Tier-1
-    exclude:
-      - /Sanity/audit-rule-number
-      - /Sanity/OOM
-      - /Sanity/SIGHUP
-      - /Sanity/FapolicydRules
+    # exclude:
+    #   - /Sanity/audit-rule-number
+    #   - /Sanity/OOM
+    #   - /Sanity/SIGHUP
+    #   - /Sanity/FapolicydRules
 
 execute:
     how: tmt
